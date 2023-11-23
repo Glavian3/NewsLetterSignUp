@@ -34,7 +34,7 @@ app.post("/", function (req,res) {
     const url = "https://us11.api.mailchimp.com/3.0/lists/9ddd8e5126";
     const options = {
         method : "POST",
-        auth : "glavian:f5ebcf25327cca75072cff1227a46b92-us11"
+        auth : "glavian:e9a33ec1ac41be6e7812c12c28e8bae8-us11"
     }
 
     const request = https.request(url, options, function (response) { 
@@ -48,7 +48,7 @@ app.post("/", function (req,res) {
         })
     })
     request.write(jsonData);
-    request.send();
+    request.end();
 })
 
 app.post("/failure", function (req,res) {  

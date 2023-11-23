@@ -48,7 +48,7 @@ app.post("/", function (req,res) {
         })
     })
     request.write(jsonData);
-    request.end();
+    request.send();
 })
 
 app.post("/failure", function (req,res) {  
